@@ -1,5 +1,6 @@
 import { queryFeatures } from '@esri/arcgis-rest-feature-layer';
-import {buildTable, generateErrorMsg} from './ui.js'
+import { generateErrorMsg } from './ui.js'
+import { buildTable } from './table.js';
 
 // feature layer - public complaints
 const vcComplaints = 'https://services1.arcgis.com/1Cfo0re3un0w6a30/ArcGIS/rest/services/survey123_a8e8ca4ac60841d4ab21dd74cf3cbeb4_fieldworker/FeatureServer/0';

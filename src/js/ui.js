@@ -1,23 +1,3 @@
-// populate data into a shell table
-export const buildTable = (table,features) => {
-    for (const element of features) {
-        let newRow = table.insertRow(-1);
-        addRow(newRow, element.attributes.CreationDate);
-        addRow(newRow, element.attributes.reason_for_complaint);
-        addRow(newRow, `${element.attributes.full_name} ${element.attributes.last_name}`);
-        addRow(newRow, element.attributes.street_address);
-        addRow(newRow, element.attributes.city);
-        addRow(newRow, element.attributes.describe_complaint);
-        addRow(newRow, element.attributes.phone_number);
-        addRow(newRow, element.attributes.e_mail_address);
-    }
-}
-// insert a new row into table
-const addRow = (row,value) => {
-    let newCell = row.insertCell(-1);
-    let newText = document.createTextNode(value);
-    newCell.appendChild(newText);
-}
 // populate element with error message
 export const generateErrorMsg = (element,error) => {
     // create element to contain error message
@@ -28,4 +8,21 @@ export const generateErrorMsg = (element,error) => {
     element.appendChild(container);
     // show error message
     element.style.display = 'block';
+}
+
+// Convert JSON date format to plain language format
+export const convertJSONDateToString = (jsonDate) => {
+    let shortDate;
+    if (jsonDate) {
+        const regex = /-?\d+/;
+        const matches = regex.exec(jsonDate);
+        const dt = new Date(parseInt(matches[0]));
+        const month = dt.getMonth() + 1;
+        const monthString = month > 9 ? month : '0' + month;
+        const day = dt.getDate();
+        const dayString = day > 9 ? day : '0' + day;
+        const year = dt.getFullYear();
+        shortDate = `${monthString}-${dayString}-${year}`;
+    }
+    return shortDate;
 }
