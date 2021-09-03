@@ -1,5 +1,6 @@
 import { queryFeatures } from '@esri/arcgis-rest-feature-layer';
-import {buildTable, generateErrorMsg} from './ui.js'
+import { fetchToken } from '@esri/arcgis-rest-auth';
+import { buildTable, generateErrorMsg } from './ui.js'
 
 // feature layer
 const municipalFSUrl = 'https://services1.arcgis.com/1Cfo0re3un0w6a30/ArcGIS/rest/services/Municipal_Boundaries/FeatureServer/0';
@@ -17,3 +18,12 @@ queryFeatures({
   console.log(`Error fetching service: ${error}`)
   generateErrorMsg(document.getElementById('error'), error);
 });
+
+// get token for secured service
+fetchToken('https://arcgis.com/sharing/generateToken', {
+  params: {
+    username: '',
+    password: '',
+    serverUrl: 'https://www.arcgis.com/'
+  }
+}).then(response => {console.log(response)}).catch(error => {console.log(error)});
