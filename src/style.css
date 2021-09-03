@@ -5,7 +5,8 @@ h1 {
     text-align: center;
 }
 
-table {
+table,
+#error {
     margin: 0 auto;
 }
 
@@ -19,6 +20,20 @@ td {
     padding: 0.25em;
 }
 
+tr:nth-child(odd) {
+    background-color: #94C6E8;
+}
+
 th {
     padding: 0.75em;
+    background-color: #4f8fbb;
+}
+
+#error {
+    display: none;
+    width: 50%;
+    margin-top: 25px;
+    padding: 15px;
+    border: solid 2px red;
+    background-color: #ddd;
 }

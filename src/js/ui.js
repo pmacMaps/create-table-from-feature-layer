@@ -13,3 +13,14 @@ const addRow = (row,value) => {
     let newText = document.createTextNode(value);
     newCell.appendChild(newText);
 }
+// populate element with error message
+export const generateErrorMsg = (element,error) => {
+    // create element to contain error message
+    const container = document.createElement('p');
+    // set content of error message
+    container.innerHTML = error;
+    // append message to parent element
+    element.appendChild(container);
+    // show error message
+    element.style.display = 'block';
+}
