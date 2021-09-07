@@ -21,7 +21,7 @@ td {
     padding: 0.25em;
 }
 
-tr:nth-child(odd) {
+tr:nth-child(even) {
     background-color: #94C6E8;
 }
 
@@ -31,7 +31,7 @@ th {
 }
 
 td div {
-    max-height: 100px;
+    max-height: 125px;
     overflow-y: auto;
 }
 
