@@ -7,12 +7,15 @@ export const buildTable = (table,features) => {
         addRow(newRow, element.attributes.MAG_DJ);
     }
 }
+
 // insert a new row into table
 const addRow = (row,value) => {
     let newCell = row.insertCell(-1);
-    let newText = document.createTextNode(value);
-    newCell.appendChild(newText);
+    let div = document.createElement('div');
+    div.innerHTML = value;
+    newCell.appendChild(div);
 }
+
 // populate element with error message
 export const generateErrorMsg = (element,error) => {
     // create element to contain error message

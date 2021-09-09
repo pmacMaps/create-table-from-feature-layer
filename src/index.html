@@ -5,13 +5,15 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Build Table From Feature Service</title>
+    <meta name="description" content="A sample app that displays the attribute information of an Esri REST service in a table, using Esri REST JS library.">
+    <link rel="shortcut icon" href="favicon.ico">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link type="text/css" rel="stylesheet" href="style.css" />
 </head>
 <body>
     <section id="wrapper">
         <h1>Records from Feature Layer</h1>
-        <table id="records">
+        <table>
             <thead>
                 <tr>
                     <th>Municipality</th>
@@ -19,7 +21,7 @@
                     <th>MDJ District</th>
                 </tr>
             </thead>
-            <tbody></tbody>
+            <tbody id="records"></tbody>
         </table>
         <div id="error">
             <h3>Error getting data</h3>
