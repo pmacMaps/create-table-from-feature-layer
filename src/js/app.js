@@ -9,7 +9,8 @@ queryFeatures({
     url: municipalFSUrl,
     where: "1=1",
     f: "json",
-    returnGeometry: false
+    returnGeometry: false,
+    orderByFields: 'MUNI'
   }).then(response => {
     // populate rows in table
     buildTable(document.getElementById('records'), response.features);
