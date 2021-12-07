@@ -2,7 +2,6 @@
   "name": "create-table-from-feature-layer",
   "version": "1.0.0",
   "description": "Creating a tabular view of records from an Esri Feature Service, using ArcGIS Rest JS",
-  "main": "index.js",
   "source": "src/index.html",
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {

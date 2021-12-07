@@ -8,7 +8,7 @@ const vcComplaints = 'https://services1.arcgis.com/1Cfo0re3un0w6a30/ArcGIS/rest/
 // get features from service
 queryFeatures({
     url: vcComplaints,
-    where: "1=1",
+    where: "Date_Resolved IS NULL",
     f: "json",
     returnGeometry: false
   }).then(response => {
