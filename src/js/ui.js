@@ -3,7 +3,7 @@ export const buildTable = (table,features) => {
     for (const element of features) {
         let newRow = table.insertRow(-1);
         addRow(newRow, element.attributes.MUNI);
-        addRow(newRow, element.attributes.POP_2020);
+        addRow(newRow, Number(element.attributes.POP_2020).toLocaleString());
         addRow(newRow, element.attributes.MAG_DJ);
     }
 }
