@@ -1,0 +1,49 @@
+#wrapper {
+    max-width: 1024px;
+}
+
+h1 {
+    text-align: center;
+}
+
+section,
+table,
+#error {
+    margin: 0 auto;
+}
+
+table,
+th,
+td {
+    border: 1px solid #555;
+}
+
+td {
+    padding: 0.35em;
+}
+
+tr:nth-child(even) {
+    background-color: #94C6E8;
+}
+
+th {
+    padding: 0.75em;
+    background-color: #4f8fbb;
+    position: sticky;
+    top: 0;
+}
+
+td div {
+    max-height: 125px;
+    overflow-y: auto;
+}
+
+#error {
+    display: none;
+    width: 50%;
+    margin-top: 25px;
+    padding: 15px;
+    border: solid 2px red;
+    background-color: #ddd;
+}
+/*# sourceMappingURL=index.af814d91.css.map */

@@ -1,0 +1,46 @@
+#wrapper {
+    max-width: 1024px;
+}
+h1 {
+    text-align: center;
+}
+
+section,
+table,
+#error {
+    margin: 0 auto;
+}
+
+table,
+th,
+td {
+    border: 1px solid #555;
+}
+
+td {
+    padding: 0.25em;
+}
+
+tr:nth-child(odd) {
+    background-color: #94C6E8;
+}
+
+th {
+    padding: 0.75em;
+    background-color: #4f8fbb;
+}
+
+td div {
+    max-height: 100px;
+    overflow-y: auto;
+}
+
+#error {
+    display: none;
+    width: 50%;
+    margin-top: 25px;
+    padding: 15px;
+    border: solid 2px red;
+    background-color: #ddd;
+}
+/*# sourceMappingURL=index.5952072d.css.map */
